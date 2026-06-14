@@ -352,7 +352,7 @@ export default function IUSPage() {
                     <div>
                       <h3 style={{fontSize:mob?"10.5px":"16px",fontWeight:500,color:"#fff",lineHeight:1.25,marginBottom:mob?"3px":"7px"}}>Clear and automated documentation</h3>
                       <p style={{fontSize:mob?"8px":"11px",color:"rgba(255,255,255,0.36)",lineHeight:1.55,display:"-webkit-box",WebkitLineClamp:mob?2:3,WebkitBoxOrient:"vertical",overflow:"hidden"} as React.CSSProperties}>
-                        You don't have to understand terminology — structured documents are ready for you.
+                        You do not have to understand terminology — structured documents are ready for you
                       </p>
                     </div>
                   </div>
