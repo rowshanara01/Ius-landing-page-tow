@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: #07070f;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #07070f; }
+::-webkit-scrollbar-thumb { background: #2d1a5e; border-radius: 2px; }
+
+input { outline: none; background: none; }
+input::placeholder { color: rgba(255,255,255,0.28); }
+button { cursor: pointer; font-family: inherit; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.85);
+  padding: 7px 18px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  transition: background 0.25s, border-color 0.25s;
+}
+.pill:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* ── Responsive overrides ────────────────────────── */
+
+/* Mobile: < 768px */
+@media (max-width: 767px) {
+  .ius-nav        { padding: 16px 20px !important; }
+  .ius-sat        { width: 90px !important; height: 56px !important; top: 18% !important; right: 3% !important; }
+  .ius-hero-top   { top: 13% !important; padding: 0 18px !important; }
+  .ius-hero-br    { display: none !important; }
+
+  /* Services: heading + cards close together at bottom */
+  .ius-svc-wrap   {
+    padding: 56px 12px 16px !important;
+    justify-content: flex-end !important;
+    gap: 0 !important;
+  }
+  .ius-svc-head   { margin-bottom: 10px !important; max-width: 100% !important; }
+  .ius-svc-h2     { font-size: 15px !important; max-width: 100% !important; margin-bottom: 6px !important; }
+  .ius-svc-p      { font-size: 10.5px !important; max-width: 100% !important; }
+
+  /* Cards stay ROW but scale down */
+  .ius-cards-row  { gap: 8px !important; max-width: 100% !important; }
+  .ius-card       { min-height: 130px !important; padding: 10px 8px 12px !important; border-radius: 12px !important; }
+  .ius-card-btn   { font-size: 9px !important; padding: 4px 9px !important; }
+  .ius-card-h3    { font-size: 11px !important; margin-bottom: 5px !important; }
+  .ius-card-p     { font-size: 9px !important; }
+
+  /* Contact */
+  .ius-contact-wrap {
+    width: 100% !important;
+    position: relative !important; top: auto !important; right: auto !important; bottom: auto !important;
+    padding: 56px 20px 32px !important;
+    align-items: center !important;
+  }
+  .ius-contact-h2  { font-size: 16px !important; text-align: center !important; }
+  .ius-form        { max-width: 100% !important; }
+  .ius-form-grid2  { grid-template-columns: 1fr !important; }
+}
+
+/* Tablet: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ius-nav        { padding: 18px 28px !important; }
+  .ius-sat        { width: 120px !important; height: 74px !important; }
+  .ius-svc-wrap   { padding: 72px 28px 40px !important; }
+  .ius-svc-head   { margin-bottom: 22px !important; }
+  .ius-cards-row  { gap: 10px !important; }
+  .ius-card       { min-height: 185px !important; }
+  .ius-card-h3    { font-size: 14px !important; }
+  .ius-contact-wrap { width: 68% !important; padding: 72px 32px 50px 20px !important; }
+}
